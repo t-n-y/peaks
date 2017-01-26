@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+
+            <h1>{{ character.name }}</h1>
+            <div class="well">
+                {{ character.description }}
+            </div>
+            <img class="img-thumbnail" src="{{ character.thumbnail.path~'.'~character.thumbnail.extension }}" alt="" width="200">
+
+            <p>nombre de comics : {{ character.comics.available }}</p>
+
+            <ul class="list-group">
+                {% for comic in character.comics.items|slice(0,3) %}
+                    <li class="list-group-item">{{ comic.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

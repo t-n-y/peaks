@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper" xmlns="http://www.w3.org/1999/html">
+        <div id="container">
+            <div class="list-group">
+                {% for item in pagination %}
+                    <a class="list-group-item-heading" href="{{ path('show_character', {'id' : item.id}) }}">
+                        <h4 class="list-group-item-heading">{{ item.name }}</h4>
+                        <img class="img-thumbnail" src="{{ item.thumbnail.path~'.'~item.thumbnail.extension }}" alt="" width="200">
+                    </a>
+                    <hr>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+{% endblock %}
+
+
