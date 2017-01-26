@@ -1,4 +1,11 @@
-my_project
+test peaks
 ==========
 
-A Symfony project created on January 23, 2017, 3:08 pm.
+Installation
+==========
+
+Clone the project.
+
+launch `composer install`
+
+Put your privat and public api key in parameters.yml
