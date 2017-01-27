@@ -3,6 +3,7 @@
 {% block body %}
     <div id="wrapper" xmlns="http://www.w3.org/1999/html">
         <div id="container">
+            <h1>Marvel API</h1>
             <div class="list-group">
                 {% for item in pagination %}
                     <a class="list-group-item-heading" href="{{ path('show_character', {'id' : item.id}) }}">

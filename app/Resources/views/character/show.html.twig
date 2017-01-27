@@ -5,9 +5,12 @@
         <div id="container">
 
             <h1>{{ character.name }}</h1>
-            <div class="well">
-                {{ character.description }}
-            </div>
+
+            {% if character.description is not empty %}
+                <div class="well">
+                    {{ character.description }}
+                </div>
+            {% endif %}
             <img class="img-thumbnail" src="{{ character.thumbnail.path~'.'~character.thumbnail.extension }}" alt="" width="200">
 
             <p>nombre de comics : {{ character.comics.available }}</p>
