@@ -64,6 +64,9 @@ class DefaultController extends Controller
         ]);
     }
 
+    /**
+     * @return string
+     */
     private function hashCreation()
     {
         $publicKey = $this->getParameter('marvel_api_public_key');
